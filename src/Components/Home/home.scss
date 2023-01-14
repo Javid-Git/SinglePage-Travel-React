@@ -1,7 +1,7 @@
 :root{
-  --mainColor: hsl(199,100%,33%);
-  --alterColor: hsl(187,85%, 43%);
-  --gradient: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%,33%));
+  --mainColor: hsl(39, 100%, 33%);
+  --alterColor: hsl(50, 85%, 43%);
+  --gradient: linear-gradient(to right, hsl(50, 85%, 43%), hsl(39, 100%, 33%));
   --white: hsl(0, 0%, 100%);
   --black: hsl(201, 33%, 16%);
   --text: hsl(240, 4%, 36%);
@@ -24,7 +24,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgb(47,106,127);
+    background: rgba(127, 87, 47, 0.54);
     top: 0;
     bottom: 0;
     z-index: 1;
@@ -53,7 +53,7 @@
     z-index: 1;
 
     .textDiv{
-      padding: 2rem 0;
+      padding: 1rem 0;
 
       .smallText{
         font-size: 13px;
@@ -63,6 +63,7 @@
       .homeTitle{
         position: relative;
         font-size: 1.8rem;
+        margin-top: 1rem;
       }
     }
     .cardDiv{
@@ -92,9 +93,10 @@
         padding: 0 1rem;
         background: var(--input);
         border-radius: 1rem;
+
         input{
           outline: none ;
-          background: transparent;
+          background: none;
           border: none;
           width: 100%;
           font-weight: 500;
@@ -103,14 +105,45 @@
             font-size: 13px;
           }
         }
+        input[type=range] {
+          height: 38px;
+          -webkit-appearance: none;
+          margin: 10px 0;
+          width: 100%;
+        }
+        input[type=range]:focus {
+          outline: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 10px;
+          cursor: pointer;
+          animate: 0.2s;
+          box-shadow: 1px 1px 1px #000000;
+          background: #a86d00;
+          border-radius: 5px;
+          border: 1px solid #000000;
+        }
+        input[type=range]::-webkit-slider-thumb {
+          box-shadow: 1px 1px 1px #000000;
+          border: 1px solid #000000;
+          height: 30px;
+          width: 15px;
+          border-radius: 5px;
+          background: #FFFFFF;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -11px;
+        }
+        input[type=range]:focus::-webkit-slider-runnable-track {
+          background: #a86d00;
+        }
         .icon{
           font-size: 18px;
           color: var(--mainColor);
           margin-left: 10px;
         }
-        .input[type=range]{
-          background: blue;
-        }
+
       }
       .searchOptions{
         position: absolute;
@@ -146,6 +179,81 @@
         font-weight: 600;
         &:hover{
           color: var(--mainColor);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px){
+  .home{
+    .homeContent{
+      .textDiv{
+        .smallText{
+          font-size: 16px;
+        }
+
+        .homeTitle{
+          position: relative;
+          font-size: 2.3rem;
+          width: max-content;
+
+          &::after{
+            position: absolute;
+            content: '';
+            background: var(--alterColor);
+            height: 5px;
+            width: 145px;
+            right: 0;
+            bottom: 5px;
+            z-index: -1;
+          }
+        }
+      }
+      .cardDiv{
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .home{
+    .homeContent{
+      .cardDiv{
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(3,1fr);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .home{
+    height: 85vh;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .home{
+    height: 95vh;
+
+    .homeContent{
+      .cardDiv{
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        .input{
+          margin-bottom: 1rem;
+        }
+
+        .searchOptions{
+          bottom: -1rem;
+          padding: 8px 1rem;
+
+          span{
+            font-size: 17px;
+
+          }
         }
       }
     }

@@ -5,7 +5,7 @@
 }
 
 :root {
-  --mainColor: hsl(199,100%,33%);
+  --mainColor: hsl(39, 100%, 33%);
   --alterColor: hsl(187,85%, 43%);
   --gradient: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%,33%));
   --white: hsl(0, 0%, 100%);
@@ -84,6 +84,21 @@ input {
 
 body {
   background: var(--body);
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .section {
+    padding: 6rem 0 4rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

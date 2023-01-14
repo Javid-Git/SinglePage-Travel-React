@@ -1,3 +1,254 @@
+:root {
+  --mainColor: hsl(39, 100%, 33%);
+  --alterColor: hsl(50, 85%, 43%);
+  --gradient: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%,33%));
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(201, 33%, 16%);
+  --text: hsl(240, 4%, 36%);
+  --whiteDeam: hsl(0,0%,93%);
+  --greyText: rgb(190,190,190);
+  --input: rgb(239, 239, 239);
+  --body: rgb(240, 240,246);
+  --card: rgb(225, 225,235);
+}
 
+.footer {
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.footer .videoDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.footer .videoDiv video {
+  height: 100%;
+  object-fit: cover;
+}
+.footer .videoDiv::after {
+  content: "";
+  position: absolute;
+  background: rgba(10, 8, 107, 0.307);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+}
+.footer .sectionContent {
+  width: 100%;
+  height: max-content;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  row-gap: 2rem;
+  z-index: 10;
+}
+.footer .sectionContent .contactDiv {
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .sectionContent .contactDiv .text small {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--white);
+}
+.footer .sectionContent .contactDiv .text h2 {
+  color: var(--white);
+  font-size: 1.8rem;
+}
+.footer .sectionContent .contactDiv .inputDiv {
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+}
+.footer .sectionContent .contactDiv .inputDiv input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 3rem;
+  border: 1px solid var(--white);
+  outline: none;
+  background: transparent;
+  color: var(--white);
+}
+.footer .sectionContent .contactDiv .inputDiv input::placeholder {
+  color: var(--white);
+  opacity: 0.5;
+}
+.footer .sectionContent .contactDiv .inputDiv .btn {
+  width: 100%;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 500;
+  gap: 0.5rem;
+}
+.footer .sectionContent .contactDiv .inputDiv .btn .icon {
+  font-size: 18px;
+}
+.footer .sectionContent .footerCard {
+  position: relative;
+  padding: 1rem 1rem 4rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background: var(--body);
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.footer .sectionContent .footerCard .footerIntro {
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.footer .sectionContent .footerCard .logoDiv .logo {
+  color: var(--black);
+  font-weight: 600;
+}
+.footer .sectionContent .footerCard .logoDiv .logo .icon {
+  font-size: 25px;
+  color: var(--mainColor);
+  margin-right: 10px;
+}
+.footer .sectionContent .footerCard .footerParagraph {
+  font-size: 13px;
+  color: var(--text);
+}
+.footer .sectionContent .footerCard .footerSocials {
+  column-gap: 0.5rem;
+}
+.footer .sectionContent .footerCard .footerSocials .icon {
+  color: var(--black);
+  font-size: 25px;
+  margin-right: 10px;
+}
+.footer .sectionContent .footerCard .footerSocials .icon:hover {
+  color: var(--mainColor);
+}
+.footer .sectionContent .footerCard .footerLink {
+  flex-basis: 50%;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.footer .sectionContent .footerCard .footerLink .linkGroup {
+  margin: 0;
+}
+.footer .sectionContent .footerCard .footerLink .linkGroup .groupTitle {
+  display: block;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.footer .sectionContent .footerCard .footerLink .linkGroup .footerList {
+  font-size: 15px;
+  color: var(--text);
+  transition: 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+.footer .sectionContent .footerCard .footerLink .linkGroup .footerList .icon {
+  font-size: 15px;
+  color: var(--greyText);
+}
+.footer .sectionContent .footerCard .footerLink .linkGroup .footerList:hover {
+  color: var(--mainColor);
+  transform: translateX(7px);
+}
+.footer .sectionContent .footerCard .footerLink .linkGroup .footerList:hover .icon {
+  color: var(--alterColor);
+}
+.footer .sectionContent .footerCard .footerDiv {
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--alterColor);
+  padding: 0.5rem 2rem;
+}
+.footer .sectionContent .footerCard .footerDiv small {
+  font-size: 10px;
+  color: var(--white);
+}
+
+@media screen and (min-width: 500px) {
+  .footer .sectionContent .footerCard .footerLink {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+  .footer .sectionContent .footerCard .footerDiv {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .footer .sectionContent .footerCard .footerDiv small {
+    font-size: 14px;
+    color: var(--white);
+  }
+}
+@media screen and (min-width: 660px) {
+  .footer .sectionContent .contactDiv {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .sectionContent .contactDiv .inputDiv {
+    width: max-content;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .footer .sectionContent .contactDiv .inputDiv input {
+    width: 60%;
+  }
+  .footer .sectionContent .contactDiv .inputDiv .btn {
+    width: max-content;
+  }
+}
+@media screen and (min-width: 860px) {
+  .footer {
+    padding: 5rem 0;
+  }
+  .footer .sectionContent .footerCard {
+    flex-direction: row;
+  }
+  .footer .sectionContent .footerCard .footerLink {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer .sectionContent .footerCard {
+    padding: 3rem 1rem;
+  }
+  .footer .sectionContent .footerCard .footerIntro .footerParagraph {
+    font-size: 15px;
+    color: var(--text);
+  }
+  .footer .sectionContent .footerCard .footerIntro .footerSocials {
+    column-gap: 0.5rem;
+  }
+  .footer .sectionContent .footerCard .footerIntro .footerSocials .icon {
+    color: var(--text);
+    font-size: 25px;
+  }
+  .footer .sectionContent .footerCard .footerIntro .footerSocials .icon:hover {
+    color: var(--mainColor);
+  }
+  .footer .sectionContent .footerCard .footerLink .linkGroup .footerList {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+}
 
 /*# sourceMappingURL=footer.css.map */

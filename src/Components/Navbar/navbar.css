@@ -1,7 +1,7 @@
 :root {
-  --mainColor: hsl(199,100%,33%);
-  --alterColor: hsl(187,85%, 43%);
-  --gradient: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%,33%));
+  --mainColor: hsl(39, 100%, 33%);
+  --alterColor: hsl(50, 85%, 43%);
+  --gradient: linear-gradient(to right, hsl(50, 85%, 43%), hsl(39, 100%, 33%));
   --white: hsl(0, 0%, 100%);
   --black: hsl(201, 33%, 16%);
   --text: hsl(240, 4%, 36%);
@@ -20,7 +20,7 @@
   background: var(--whiteDeam);
   width: 100%;
   padding: 1rem;
-  z-index: 10;
+  z-index: 20;
   box-shadow: 0 2px 4px rgba(121, 140, 161, 0.9);
 }
 .header .logo {
@@ -93,6 +93,47 @@
   }
   .header .activeNavbar {
     top: 7rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .toggleNavbar, .closeNavbar {
+    display: none;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .navbar .navlists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .header .navbar .navlists .navitem .navlink {
+    color: var(--text);
+    padding: 0rem 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .header .navbar .navlists .navitem .navlink:hover {
+    color: var(--mainColor);
+  }
+  .header .navbar .navlists .btn {
+    margin-left: 1rem;
+  }
+  .header .navbar .navlists .btn a {
+    color: var(--white);
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 960px) {
+  .header .navbar .navlists .navitem {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem 5rem;
   }
 }
 
