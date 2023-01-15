@@ -151,7 +151,7 @@
   left: 50%;
   transform: translate(-50%);
   justify-content: center;
-  padding: 0.6rem;
+  padding: 0.2rem;
   cursor: pointer;
 }
 .home .homeContent .cardDiv .searchOptions:hover {
@@ -160,8 +160,14 @@
 .home .homeContent .cardDiv .searchOptions .icon {
   font-size: 18px;
 }
-.home .homeContent .cardDiv .searchOptions span {
+.home .homeContent .cardDiv .searchOptions button {
+  cursor: pointer;
   font-size: 13px;
+  color: var(--white);
+  padding: 10px 3px 10px 3px;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 .home .homeContent .homeFooterIcons {
   width: 100%;
@@ -215,18 +221,18 @@
   .home {
     height: 95vh;
   }
-  .home .homeContent .cardDiv {
+  .home .homeContent .cardDiv .formDiv {
     padding: 2rem 1rem;
     grid-template-columns: repeat(3, 1fr);
   }
-  .home .homeContent .cardDiv .input {
+  .home .homeContent .cardDiv .formDiv .input {
     margin-bottom: 1rem;
   }
-  .home .homeContent .cardDiv .searchOptions {
+  .home .homeContent .cardDiv .formDiv .searchOptions {
     bottom: -1rem;
     padding: 8px 1rem;
   }
-  .home .homeContent .cardDiv .searchOptions span {
+  .home .homeContent .cardDiv .formDiv .searchOptions button {
     font-size: 17px;
   }
 }

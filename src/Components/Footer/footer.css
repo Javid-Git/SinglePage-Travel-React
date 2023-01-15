@@ -1,7 +1,7 @@
 :root {
   --mainColor: hsl(39, 100%, 33%);
   --alterColor: hsl(50, 85%, 43%);
-  --gradient: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%,33%));
+  --gradient: linear-gradient(to right, hsl(50, 85%, 43%), hsl(39, 100%, 33%));
   --white: hsl(0, 0%, 100%);
   --black: hsl(201, 33%, 16%);
   --text: hsl(240, 4%, 36%);

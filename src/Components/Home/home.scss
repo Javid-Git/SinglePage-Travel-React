@@ -72,6 +72,7 @@
       background: var(--white);
       border-radius: 10px;
       gap: 1rem;
+
       label{
         display: block;
         color: var(--text);
@@ -155,7 +156,7 @@
         left: 50%;
         transform: translate(-50%);
         justify-content: center;
-        padding: .6rem;
+        padding: .2rem;
         cursor: pointer;
         &:hover{
           background: var(--mainColor);
@@ -163,8 +164,14 @@
         .icon{
           font-size: 18px;
         }
-        span{
+        button{
+          cursor: pointer;
           font-size: 13px;
+          color: var(--white);
+          padding: 10px 3px 10px 3px;
+          background-color: transparent;
+          outline: none;
+          border: none;
         }
       }
     }
@@ -236,24 +243,26 @@
 @media screen and (min-width: 1240px) {
   .home{
     height: 95vh;
-
     .homeContent{
-      .cardDiv{
-        padding: 2rem 1rem;
-        grid-template-columns: repeat(3, 1fr);
+      .cardDiv {
+        .formDiv {
+          padding: 2rem 1rem;
+          grid-template-columns: repeat(3, 1fr);
 
-        .input{
-          margin-bottom: 1rem;
-        }
-
-        .searchOptions{
-          bottom: -1rem;
-          padding: 8px 1rem;
-
-          span{
-            font-size: 17px;
-
+          .input {
+            margin-bottom: 1rem;
           }
+
+          .searchOptions {
+            bottom: -1rem;
+            padding: 8px 1rem;
+
+            button {
+              font-size: 17px;
+
+            }
+          }
+
         }
       }
     }

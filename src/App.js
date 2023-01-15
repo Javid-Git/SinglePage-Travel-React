@@ -10,7 +10,6 @@ function App() {
     <div>
         <Navbar/>
         <Home/>
-        <Main/>
         <Footer/>
     </div>
   );
